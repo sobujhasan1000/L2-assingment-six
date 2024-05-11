@@ -6,7 +6,7 @@ export const baseApi = createApi({
   endpoints: (builder) => ({
     getDonation: builder.query({
       query: () => ({
-        url: "/getdonation",
+        url: "/alldonations",
         method: "GET",
       }),
     }),
