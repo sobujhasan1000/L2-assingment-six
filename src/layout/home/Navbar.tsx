@@ -12,10 +12,10 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-4">
             <a href="#" className=" mr-4">
-              <NavLink to={"home"}>Home</NavLink>
+              <NavLink to={"/"}>Home</NavLink>
             </a>
             <a href="#" className=" mr-4">
-              <NavLink to={"donations"}>Donations</NavLink>
+              <NavLink to={"donations"}> All Donations</NavLink>
             </a>
             <a href="#" className=" mr-4">
               <NavLink to={"dashboard"}>Dashboard</NavLink>

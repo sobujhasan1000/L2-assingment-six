@@ -10,14 +10,13 @@ export const baseApi = createApi({
         method: "GET",
       }),
     }),
-    postDonation: builder.mutation({
-      query: (data) => ({
-        url: "/postdonation",
-        method: "POST",
-        body: data,
-      }),
+    postdonation: builder.mutation({
+      query: (data) => {
+        console.log("insite data", data);
+        return { url: "/postdonation", method: "POST", body: data };
+      },
     }),
   }),
 });
 
-export const { useGetDonationQuery, usePostDonationMutation } = baseApi;
+export const { useGetDonationQuery, usePostdonationMutation } = baseApi;
