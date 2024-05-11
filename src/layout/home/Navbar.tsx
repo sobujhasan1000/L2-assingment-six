@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import { FcDribbble } from "react-icons/fc";
 const Navbar = () => {
   return (
     <nav className=" bg-green-200 p-4">
@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="flex justify-between">
           <div className="flex items-center">
             <a href="#" className="text-white font-semibold text-lg">
-              Logo
+              <FcDribbble className="text-5xl" />
             </a>
           </div>
           <div className="flex items-center gap-4">

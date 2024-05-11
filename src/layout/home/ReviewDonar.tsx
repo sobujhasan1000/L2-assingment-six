@@ -115,6 +115,7 @@ export const AllDonation = [
 const ReviewDonar = () => {
   return (
     <div className="p-6" style={{ backgroundImage: `url(${donateBG})` }}>
+      <h1 className="text-center font-bold text-3xl p-4">Feedback</h1>
       <Swiper
         slidesPerView={1}
         spaceBetween={50}

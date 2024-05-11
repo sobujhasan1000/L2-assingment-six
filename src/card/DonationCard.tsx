@@ -113,26 +113,33 @@ export const AllDonation = [
 
 const DonationCard = () => {
   return (
-    <div className="my-4 grid grid-cols-3 gap-10 mx-16">
-      {AllDonation.slice(0, 6).map((item) => (
-        <div
-          key={item.title}
-          className="card card-compact bg-base-100 shadow-xl rounded-md"
-        >
-          <figure>
-            <img className="rounded-md" src={item.image} alt={item.title} />
-          </figure>
-          <div className="card-body p-4">
-            <h2 className="card-title">{item.title}</h2>
-            <p className="text-sm">{item.description}</p>
-            <div className="card-actions justify-end">
-              <button className="btn bg-green-400 p-2 rounded-md text-xl">
-                View details
-              </button>
+    <div>
+      <div className="my-4 grid grid-cols-3 gap-10 mx-16">
+        {AllDonation.slice(0, 6).map((item) => (
+          <div
+            key={item.title}
+            className="card card-compact bg-lime-50 shadow-xl rounded-md"
+          >
+            <figure>
+              <img
+                className="p-3 card-body h-64 rounded-md"
+                src={item.image}
+                alt={item.title}
+              />
+            </figure>
+            <div className="card-body p-4">
+              <h2 className="card-title">{item.title}</h2>
+              <p className="text-xl">catagori: {item.catagorie}</p>
+              <p className="text-xl">{item.amount}$</p>
+              <div className="card-actions justify-end">
+                <button className="btn bg-green-200 p-2 rounded-md text-xl">
+                  View details
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
