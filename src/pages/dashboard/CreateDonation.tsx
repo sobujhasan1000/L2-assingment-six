@@ -1,8 +1,18 @@
 import React, { FormEvent, useState } from "react";
 import { usePostdonationMutation } from "../../redux/api/api";
 
+// Define types for your input data
+type FormData = {
+  image: string;
+  category: string;
+  title: string;
+  amount: number | string; // Assuming amount can also be a string
+  description: string;
+};
+
 const CreateDonation = () => {
-  const [formData, setFormData] = useState({
+  // Initialize state with the FormData type
+  const [formData, setFormData] = useState<FormData>({
     image: "",
     category: "",
     title: "",
@@ -10,22 +20,41 @@ const CreateDonation = () => {
     description: "",
   });
 
+  // Use the usePostdonationMutation hook to handle the API call
   const [postdonation, { data, isLoading, isError }] =
     usePostdonationMutation();
-  console.log(data, isLoading, isError, "final data");
+
+  // Handle changes in form inputs
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+    // Update formData state with the new value
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
   };
 
+  // Handle form submission
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    postdonation(formData);
+    try {
+      // Call the postdonation mutation with formData
+      await postdonation(formData);
+      console.log("Donation posted successfully");
+      // Reset form fields after successful submission
+      setFormData({
+        image: "",
+        category: "",
+        title: "",
+        amount: "",
+        description: "",
+      });
+    } catch (error) {
+      console.error("Error posting donation:", error);
+      // Handle error (e.g., display error message to the user)
+    }
   };
 
   return (
