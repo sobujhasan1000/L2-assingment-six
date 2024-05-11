@@ -21,8 +21,7 @@ const CreateDonation = () => {
   });
 
   // Use the usePostdonationMutation hook to handle the API call
-  const [postdonation, { data, isLoading, isError }] =
-    usePostdonationMutation();
+  const [postdonation] = usePostdonationMutation();
 
   // Handle changes in form inputs
   const handleChange = (

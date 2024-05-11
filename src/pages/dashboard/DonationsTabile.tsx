@@ -10,7 +10,7 @@ type TDonation = {
 const DonationsTabile = () => {
   const { data, isLoading, error } = useGetDonationQuery({});
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  if (error) return <div>Error:</div>;
   if (!data) return null;
   console.log(data, "find my data");
 
