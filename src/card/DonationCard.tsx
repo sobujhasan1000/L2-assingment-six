@@ -18,22 +18,22 @@ const DonationCard = () => {
   return (
     <div>
       <div className="my-4 grid grid-cols-3 gap-10 mx-16">
-        {data.donations.map((item: TDonation) => (
+        {data.donations.slice(0, 6).map((item: TDonation) => (
           <div
             key={item.title}
-            className="card card-compact bg-lime-50 shadow-xl rounded-md"
+            className="card card-compact bg-cyan-600 shadow-xl rounded-md"
           >
             <figure>
               <img
-                className="p-3 card-body rounded-md"
+                className="p-3 card-body h-64"
                 src={item.image}
                 alt={item.title}
               />
             </figure>
-            <div className="card-body p-4">
-              <h2 className="card-title">{item.image}</h2>
-              <p className="text-xl">catagori: {item.category}</p>
-              <p className="text-xl">{item.amount}$</p>
+            <div className="card-body p-4 text-white">
+              <h1 className="card-title font-bold">{item.category}</h1>
+              <p className="text-xl">{item.title}</p>
+              <p className="text-xl">Donate {item.amount}$</p>
               <div className="card-actions justify-end">
                 <button className="btn bg-green-200 p-2 rounded-md text-xl">
                   View details
