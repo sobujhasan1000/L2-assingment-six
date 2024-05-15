@@ -35,7 +35,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="col-span-1">
-          <img src={aboutImg} alt="About Us" />
+          <img className="h-max" src={aboutImg} alt="About Us" />
         </div>
       </div>
     </div>

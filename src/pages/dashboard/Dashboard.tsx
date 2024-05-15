@@ -10,7 +10,7 @@ const Dashboard = () => {
           <Outlet />
           <label
             htmlFor="my-drawer-2"
-            className="btn btn-primary drawer-button lg:hidden"
+            className="btn btn-secondary drawer-button lg:hidden"
           >
             Open drawer
           </label>
@@ -21,13 +21,13 @@ const Dashboard = () => {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+          <ul className="menu p-4 w-80 min-h-full bg-slate-300 text-base-content">
             {/* Sidebar content here */}
             <li>
               <NavLink to="/dashboard">PieChart</NavLink>
             </li>
             <li>
-              <NavLink to="/dashboard/create-table">All Donations</NavLink>
+              <NavLink to="/dashboard/donations">All Donations</NavLink>
             </li>
             <li>
               <NavLink to="/dashboard/create-donation">

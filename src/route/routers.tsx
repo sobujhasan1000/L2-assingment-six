@@ -38,7 +38,7 @@ const route = createBrowserRouter([
             element: <Paichart />,
           },
           {
-            path: "create-table",
+            path: "donations",
             element: <DonationsTabile />,
           },
           {

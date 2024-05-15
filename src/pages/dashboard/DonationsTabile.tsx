@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useGetDonationQuery } from "../../redux/api/api";
 
 type TDonation = {
@@ -16,9 +17,14 @@ const DonationsTabile = () => {
 
   return (
     <div>
-      <div className="overflow-x-auto">
+      <div className="flex justify-end mb-4">
+        <Link to="/dashboard/create-donation">
+          <button className="btn bg-cyan-300">Add Donation post</button>
+        </Link>
+      </div>
+      <div className="overflow-x-auto bg-slate-300 rounded-md">
         <table className="table">
-          <thead>
+          <thead className="text-xl">
             <tr>
               <th></th>
               <th>title</th>
@@ -28,11 +34,17 @@ const DonationsTabile = () => {
           </thead>
           <tbody>
             {data.donations.map((item: TDonation) => (
-              <tr key={item.title}>
+              <tr key={item.title} className="text-xl">
                 <th></th>
                 <td>{item.title}</td>
                 <td>{item.category}</td>
                 <td>{item.amount}</td>
+                <td>
+                  <button className="bg-cyan-300 btn">Edit</button>
+                </td>
+                <td>
+                  <button className="bg-cyan-300 btn">Delete</button>
+                </td>
               </tr>
             ))}
           </tbody>
