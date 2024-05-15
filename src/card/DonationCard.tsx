@@ -42,7 +42,7 @@ const DonationCard = () => {
               <p className="text-xl">Donate {item.amount}$</p>
               <div className="card-actions justify-end">
                 <button
-                  className="btn bg-cyan-300 p-2 rounded-md text-xl"
+                  className="btn bg-cyan-300 p-2 rounded-md"
                   onClick={() => setSelectedDonation(item)}
                 >
                   View details
