@@ -8,6 +8,8 @@ import Dashboard from "../pages/dashboard/Dashboard";
 import Paichart from "../pages/dashboard/Paichart";
 import DonationsTabile from "../pages/dashboard/DonationsTabile";
 import CreateDonation from "../pages/dashboard/CreateDonation";
+import DonationDetail from "../pages/donationDetail";
+
 const route = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +22,10 @@ const route = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "donations/:_id",
+        element: <DonationDetail />,
       },
       {
         path: "register",
