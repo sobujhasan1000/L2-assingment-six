@@ -60,7 +60,7 @@ const CreateDonation = () => {
     <div className="text-xl">
       <form
         onSubmit={handleSubmit}
-        className="bg-slate-400 p-6 rounded-md h-auto grid gap-4 w-{700}"
+        className="bg-slate-400 p-6 rounded-md h-auto grid gap-4"
       >
         <label className="input input-bordered flex items-center gap-4 m-2 bg-cyan-200">
           Image

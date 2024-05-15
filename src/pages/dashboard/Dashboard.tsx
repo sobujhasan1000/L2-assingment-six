@@ -10,7 +10,7 @@ const Dashboard = () => {
           <Outlet />
           <label
             htmlFor="my-drawer-2"
-            className="btn btn-secondary drawer-button lg:hidden"
+            className="btn btn-primary drawer-button lg:hidden"
           >
             Open drawer
           </label>

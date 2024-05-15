@@ -17,7 +17,7 @@ const DonationsTabile = () => {
 
   return (
     <div>
-      <div className="flex justify-end mb-4">
+      <div className="flex justify-end my-4">
         <Link to="/dashboard/create-donation">
           <button className="btn bg-cyan-300">Add Donation post</button>
         </Link>
