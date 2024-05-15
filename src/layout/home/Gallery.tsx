@@ -22,22 +22,25 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 my-6">
-      {gallery.map((item, index) => (
-        <div
-          key={index}
-          className={`p-4 ${
-            index === currentImageIndex ? "fade-in" : "fade-out"
-          }`}
-        >
-          <img
-            src={item}
-            alt={`Img ${index + 1}`}
-            className=" h-64 rounded-md w-full"
-          />
-        </div>
-      ))}
-    </div>
+    <>
+      <h1 className="text-3xl font-bold mt-6 text-center">Our gallery</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 my-6">
+        {gallery.map((item, index) => (
+          <div
+            key={index}
+            className={`p-4 ${
+              index === currentImageIndex ? "fade-in" : "fade-out"
+            }`}
+          >
+            <img
+              src={item}
+              alt={`Img ${index + 1}`}
+              className=" h-64 rounded-md w-full"
+            />
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
